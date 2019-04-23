@@ -1,0 +1,13 @@
+button.primary {
+  background-color: dodgerblue;
+  color: white;
+  width: 150px;
+  height: 50px;
+}
+
+button.secondary {
+  background-color: forestgreen;
+  color: white;
+  width: 150px;
+  height: 50px;
+}

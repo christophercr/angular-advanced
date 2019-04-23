@@ -1,0 +1,14 @@
+<h2>Custom button</h2>
+
+<app-button type="primary" (click)="click()">Custom Button</app-button>
+
+<hr>
+
+<h2>Custom NgIf</h2>
+
+<button type="button" (click)="toggleCondition()">Show/Hide</button>
+
+<pre>Condition: {{condition}}</pre>
+<br>
+
+<div *appNgIf="condition">This content is shown only if the condition is true</div>
