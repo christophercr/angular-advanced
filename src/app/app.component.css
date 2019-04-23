@@ -1,0 +1,28 @@
+.app {
+  display: flex;
+}
+
+.app-menu {
+  margin: 0;
+  padding: 0 20px;
+  width: 180px;
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.app-menu li {
+  list-style-type: none;
+}
+
+.app-menu li a {
+  color: white;
+}
+
+.app-menu li a.active {
+  color: darkblue;
+}
+
+.app-content {
+  flex: 1;
+  text-align: center;
+}
