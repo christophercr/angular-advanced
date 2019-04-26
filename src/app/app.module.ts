@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeModule} from "./home/home.module";
-import {PerformanceModule} from "./performance/performance.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +12,6 @@ import {PerformanceModule} from "./performance/performance.module";
   imports: [
     BrowserModule,
     HomeModule,
-    PerformanceModule,
     AppRoutingModule
   ],
   providers: [],

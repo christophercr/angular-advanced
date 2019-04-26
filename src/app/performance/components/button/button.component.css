@@ -1,11 +1,11 @@
-button.primary {
+:host[type="primary"] button {
   background-color: dodgerblue;
   color: white;
   width: 150px;
   height: 50px;
 }
 
-button.secondary {
+:host[type="secondary"] button {
   background-color: forestgreen;
   color: white;
   width: 150px;

@@ -4,7 +4,7 @@ import {DemoPageComponent} from "./pages/demo/demo-page.component";
 
 const routes: Routes = [
   {
-    path: 'performance', component: DemoPageComponent
+    path: '', component: DemoPageComponent
   },
 ];
 

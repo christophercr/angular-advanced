@@ -1,0 +1,8 @@
+.content-block {
+  padding: 25px;
+  border: 1px solid cornflowerblue;
+}
+
+.carousel img {
+  max-height: 150px;
+}

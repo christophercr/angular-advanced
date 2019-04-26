@@ -12,3 +12,28 @@
 <br>
 
 <div *appNgIf="condition">This content is shown only if the condition is true</div>
+
+<hr>
+
+<h2>Spinner</h2>
+
+<button type="button" (click)="toggleSpinner()">Show/Hide</button>
+
+<pre>Spinner displayed: {{isVisible}}</pre>
+
+<div *appSpinner="isVisible" class="content-block">
+  This element will be hidden when the spinner is displayed
+</div>
+
+<hr>
+
+<h2>Carousel</h2>
+
+<div *appCarousel="let image from images; let ctrl = controller" class="carousel">
+  <img [src]="image">
+
+  <div>
+    <button (click)="ctrl.prev()">Previous</button>
+    <button (click)="ctrl.next()">Next</button>
+  </div>
+</div>

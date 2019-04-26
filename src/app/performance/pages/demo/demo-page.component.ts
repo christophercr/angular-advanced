@@ -8,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
 export class DemoPageComponent implements OnInit {
 
   condition = false;
+  isVisible = false;
+  images = ['/assets/images/img1.png', '/assets/images/img2.png', '/assets/images/img3.png', '/assets/images/img4.png', '/assets/images/img5.png'];
 
   constructor() {
 
@@ -17,11 +19,15 @@ export class DemoPageComponent implements OnInit {
   }
 
   click(): void {
-    console.log("click!");
+    console.log('click!');
   }
 
   toggleCondition(): void {
     this.condition = !this.condition;
+  }
+
+  toggleSpinner(): void {
+    this.isVisible = !this.isVisible;
   }
 
 }

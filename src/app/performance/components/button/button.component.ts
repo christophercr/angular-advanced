@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Attribute, Component, OnInit} from '@angular/core';
 
 export type ButtonType = 'primary' | 'secondary';
 
@@ -8,10 +8,8 @@ export type ButtonType = 'primary' | 'secondary';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input()
-  type: ButtonType = "primary";
 
-  constructor() {
+  constructor(@Attribute("type") public type: ButtonType = "primary") {
     console.log("--- PerfButton constructor");
   }
 
