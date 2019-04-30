@@ -7,6 +7,9 @@ const routes: Routes = [
   },
   {
     path: 'performance', loadChildren: './performance/performance.module#PerformanceModule'
+  },
+  {
+    path: 'state-management', loadChildren: './state-management/state-management.module#StateManagementModule'
   }
 ];
 

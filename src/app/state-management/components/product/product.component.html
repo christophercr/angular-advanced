@@ -1,0 +1,45 @@
+<div class="product">
+  <div class="product-image">
+    <img [src]="image" [title]="imageTooltip">
+  </div>
+
+  <div class="product-info">
+    <h2>{{ title }}</h2>
+    <p>{{description}}</p>
+    <a [href]="link" target="_blank">More info</a>
+
+    <p *ngIf="inventory > 10">In Stock</p>
+    <p *ngIf="inventory <= 10 && inventory > 0">Almost sold out!</p>
+    <p *ngIf="inventory === 0">Out of Stock</p>
+
+    <p>{{sale}}</p>
+
+    <product-details [details]="productDetails"></product-details>
+
+    <div>
+      <div *ngFor="let variant of variants, index as idx; trackBy: trackItemFn"
+           class="color-box"
+           [ngStyle]="{ backgroundColor: variant.color, border: 'solid 1px' }"
+           (mouseover)="updateProduct(idx)">
+      </div>
+    </div>
+
+    <ul>
+      <li *ngFor="let size of sizes">{{size}}</li>
+    </ul>
+
+    <p>Shipping: {{shipping}}</p>
+
+  </div>
+
+  <div class="actions">
+    <button (click)="addToCart()"
+            [ngClass]="{ disabledButton: inventory === 0 }"
+            [disabled]="inventory === 0">Add to Cart
+    </button>
+
+    <button (click)="removeFromCart()">Remove from Cart</button>
+
+    <button (click)="goBack()" class="back-button">Go back</button>
+  </div>
+</div>

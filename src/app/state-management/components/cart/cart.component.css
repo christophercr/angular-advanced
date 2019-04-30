@@ -1,0 +1,12 @@
+.cart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+p {
+  background-color: forestgreen;
+  color: white;
+  padding: 10px;
+  border: solid 1px;
+  width: 200px;
+}

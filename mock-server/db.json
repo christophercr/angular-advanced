@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Shirts",
+      "description": "Cool shirt with the Angular logo! You should try them!",
+      "link": "https://www.google.com/search?q=angular+shirt&tbm=isch",
+      "sizes": [
+        "large",
+        "medium",
+        "small"
+      ],
+      "variants": [
+        {
+          "id": "1-1",
+          "color": "white",
+          "image": "./assets/images/shirt-white.jpg",
+          "quantity": 0
+        },
+        {
+          "id": "1-2",
+          "color": "blue",
+          "image": "./assets/images/shirt-blue.jpg",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mugs",
+      "description": "Drink your coffee in one of this nice mugs!",
+      "link": "https://www.google.com/search?q=angularjs+mug&tbm=isch",
+      "sizes": [
+        "big",
+        "small"
+      ],
+      "variants": [
+        {
+          "id": "2-1",
+          "color": "white",
+          "image": "./assets/images/mug-white.jpg",
+          "quantity": 25
+        },
+        {
+          "id": "2-2",
+          "color": "blue",
+          "image": "./assets/images/mug-blue.jpg",
+          "quantity": 10
+        }
+      ]
+    }
+  ],
+  "product-details": [
+    {
+      "id": "1-1",
+      "details": [
+        "100% cotton",
+        "White",
+        "Red logo"
+      ]
+    },
+    {
+      "id": "1-2",
+      "details": [
+        "50% polyester - 50% cotton",
+        "Blue",
+        "Red logo with white border"
+      ]
+    },
+    {
+      "id": "2-1",
+      "details": [
+        "100% ceramic",
+        "White",
+        "Angular logo"
+      ]
+    },
+    {
+      "id": "2-2",
+      "details": [
+        "100% resin",
+        "Blue",
+        "AngularJS red logo"
+      ]
+    }
+  ]
+}
