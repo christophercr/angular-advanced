@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {select, Store} from '@ngrx/store';
+import {selectShoppingCartItems} from '../../reducers';
 
 @Component({
   selector: 'cart',
@@ -7,9 +9,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  items: string[] = [];
+  items: ReadonlyArray<string> = [];
 
-  constructor() {
+  constructor(public store: Store<any>) {
+    store.pipe(select(selectShoppingCartItems)).subscribe((items) => {
+      console.log('--------- items', items);
+      this.items = items;
+    });
   }
 
   ngOnInit() {
