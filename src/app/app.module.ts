@@ -1,11 +1,12 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {AkitaNgDevtools} from '@datorama/akita-ngdevtools';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeModule} from './home/home.module';
-import {Router} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,11 @@ import {Router} from "@angular/router";
     BrowserModule,
     HomeModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AkitaNgDevtools.forRoot({
+      maxAge: 50, // retains last 50 states
+      logTrace: false // output a console.trace() for each action in the console (useful only in development)
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

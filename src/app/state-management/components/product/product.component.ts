@@ -1,9 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Data, ParamMap, Router} from '@angular/router';
 import {combineLatest} from 'rxjs';
 import {take} from 'rxjs/operators';
 import {ProductService} from '../../services/product.service';
 import {Product, ProductVariant} from '../../entities/product.intf';
+import {ShoppingCartStore} from '../../state/shopping-cart.store';
 
 @Component({
   selector: 'product',
@@ -13,8 +14,6 @@ import {Product, ProductVariant} from '../../entities/product.intf';
 export class ProductComponent implements OnInit {
 
   @Input() premium;
-  @Output() addedToCart = new EventEmitter();
-  @Output() removedFromCart = new EventEmitter();
 
   product: Product;
   selectedVariant: number;
@@ -71,7 +70,7 @@ export class ProductComponent implements OnInit {
 
   _productDetails = {};
 
-  constructor(public route: ActivatedRoute, public router: Router, public productService: ProductService) {
+  constructor(public route: ActivatedRoute, public router: Router, public productService: ProductService, public store: ShoppingCartStore) {
   }
 
   ngOnInit() {
@@ -122,11 +121,11 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart() {
-    this.addedToCart.emit(this.variants[this.selectedVariant].id);
+    this.store.addItem(this.variants[this.selectedVariant].id);
   }
 
   removeFromCart() {
-    this.removedFromCart.emit(this.variants[this.selectedVariant].id);
+    this.store.removeItem(this.variants[this.selectedVariant].id);
   }
 
   updateProduct(variantIndex) {

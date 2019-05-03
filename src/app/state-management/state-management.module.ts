@@ -9,6 +9,8 @@ import {ProductComponent} from './components/product/product.component';
 import {ProductOverviewComponent} from './components/product-overview/product-overview.component';
 import {CartComponent} from './components/cart/cart.component';
 import {ProductListComponent} from './components/product-list/product-list.component';
+import {ShoppingCartStore} from './state/shopping-cart.store';
+import {ShoppingCartQuery} from './state/shopping-cart.query';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,10 @@ import {ProductListComponent} from './components/product-list/product-list.compo
     FormsModule,
     ReactiveFormsModule,
     StateManagementRoutingModule
+  ],
+  providers: [ // the Store and the Queries are services
+    ShoppingCartStore,
+    ShoppingCartQuery
   ]
 })
 export class StateManagementModule {

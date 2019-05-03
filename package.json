@@ -35,6 +35,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@datorama/akita": "^3.9.2",
+    "@datorama/akita-ngdevtools": "^1.0.4",
     "core-js": "^2.5.4",
     "json-server": "^0.14.2",
     "rxjs": "~6.3.3",
