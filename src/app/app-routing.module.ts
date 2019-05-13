@@ -10,6 +10,9 @@ const routes: Routes = [
   },
   {
     path: 'state-management', loadChildren: './state-management/state-management.module#StateManagementModule'
+  },
+  {
+    path: '**', redirectTo: 'home'
   }
 ];
 
